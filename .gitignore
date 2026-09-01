@@ -7,3 +7,7 @@
 venv/
 *.h5
 *.keras
+
+kaggle.json
+*.env
+.kaggle/
