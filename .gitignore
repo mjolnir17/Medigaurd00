@@ -13,3 +13,5 @@ kaggle.json
 .kaggle/
 
 data/
+
+*.pt
