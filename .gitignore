@@ -11,3 +11,5 @@ venv/
 kaggle.json
 *.env
 .kaggle/
+
+data/
