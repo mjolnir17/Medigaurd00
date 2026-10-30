@@ -1,0 +1,207 @@
+{
+  "image_size": 224,
+  "classes": {
+    "NORMAL": {
+      "original": "NORMAL_original.png",
+      "noise": [
+        {
+          "label": "low",
+          "description": "sigma 0.05",
+          "file": "NORMAL_noise_low.png"
+        },
+        {
+          "label": "medium",
+          "description": "sigma 0.1",
+          "file": "NORMAL_noise_medium.png"
+        },
+        {
+          "label": "high",
+          "description": "sigma 0.2",
+          "file": "NORMAL_noise_high.png"
+        }
+      ],
+      "blur": [
+        {
+          "label": "low",
+          "description": "kernel 3, sigma 1.0",
+          "file": "NORMAL_blur_low.png"
+        },
+        {
+          "label": "medium",
+          "description": "kernel 7, sigma 2.5",
+          "file": "NORMAL_blur_medium.png"
+        },
+        {
+          "label": "high",
+          "description": "kernel 15, sigma 5.0",
+          "file": "NORMAL_blur_high.png"
+        }
+      ],
+      "brightness": [
+        {
+          "label": "low_dark",
+          "description": "factor 0.85",
+          "file": "NORMAL_brightness_low_dark.png"
+        },
+        {
+          "label": "medium_dark",
+          "description": "factor 0.65",
+          "file": "NORMAL_brightness_medium_dark.png"
+        },
+        {
+          "label": "high_dark",
+          "description": "factor 0.4",
+          "file": "NORMAL_brightness_high_dark.png"
+        },
+        {
+          "label": "low_bright",
+          "description": "factor 1.15",
+          "file": "NORMAL_brightness_low_bright.png"
+        },
+        {
+          "label": "medium_bright",
+          "description": "factor 1.35",
+          "file": "NORMAL_brightness_medium_bright.png"
+        },
+        {
+          "label": "high_bright",
+          "description": "factor 1.6",
+          "file": "NORMAL_brightness_high_bright.png"
+        }
+      ],
+      "contrast": [
+        {
+          "label": "low_flat",
+          "description": "factor 0.85",
+          "file": "NORMAL_contrast_low_flat.png"
+        },
+        {
+          "label": "medium_flat",
+          "description": "factor 0.6",
+          "file": "NORMAL_contrast_medium_flat.png"
+        },
+        {
+          "label": "high_flat",
+          "description": "factor 0.35",
+          "file": "NORMAL_contrast_high_flat.png"
+        },
+        {
+          "label": "low_harsh",
+          "description": "factor 1.15",
+          "file": "NORMAL_contrast_low_harsh.png"
+        },
+        {
+          "label": "medium_harsh",
+          "description": "factor 1.4",
+          "file": "NORMAL_contrast_medium_harsh.png"
+        },
+        {
+          "label": "high_harsh",
+          "description": "factor 1.7",
+          "file": "NORMAL_contrast_high_harsh.png"
+        }
+      ]
+    },
+    "PNEUMONIA": {
+      "original": "PNEUMONIA_original.png",
+      "noise": [
+        {
+          "label": "low",
+          "description": "sigma 0.05",
+          "file": "PNEUMONIA_noise_low.png"
+        },
+        {
+          "label": "medium",
+          "description": "sigma 0.1",
+          "file": "PNEUMONIA_noise_medium.png"
+        },
+        {
+          "label": "high",
+          "description": "sigma 0.2",
+          "file": "PNEUMONIA_noise_high.png"
+        }
+      ],
+      "blur": [
+        {
+          "label": "low",
+          "description": "kernel 3, sigma 1.0",
+          "file": "PNEUMONIA_blur_low.png"
+        },
+        {
+          "label": "medium",
+          "description": "kernel 7, sigma 2.5",
+          "file": "PNEUMONIA_blur_medium.png"
+        },
+        {
+          "label": "high",
+          "description": "kernel 15, sigma 5.0",
+          "file": "PNEUMONIA_blur_high.png"
+        }
+      ],
+      "brightness": [
+        {
+          "label": "low_dark",
+          "description": "factor 0.85",
+          "file": "PNEUMONIA_brightness_low_dark.png"
+        },
+        {
+          "label": "medium_dark",
+          "description": "factor 0.65",
+          "file": "PNEUMONIA_brightness_medium_dark.png"
+        },
+        {
+          "label": "high_dark",
+          "description": "factor 0.4",
+          "file": "PNEUMONIA_brightness_high_dark.png"
+        },
+        {
+          "label": "low_bright",
+          "description": "factor 1.15",
+          "file": "PNEUMONIA_brightness_low_bright.png"
+        },
+        {
+          "label": "medium_bright",
+          "description": "factor 1.35",
+          "file": "PNEUMONIA_brightness_medium_bright.png"
+        },
+        {
+          "label": "high_bright",
+          "description": "factor 1.6",
+          "file": "PNEUMONIA_brightness_high_bright.png"
+        }
+      ],
+      "contrast": [
+        {
+          "label": "low_flat",
+          "description": "factor 0.85",
+          "file": "PNEUMONIA_contrast_low_flat.png"
+        },
+        {
+          "label": "medium_flat",
+          "description": "factor 0.6",
+          "file": "PNEUMONIA_contrast_medium_flat.png"
+        },
+        {
+          "label": "high_flat",
+          "description": "factor 0.35",
+          "file": "PNEUMONIA_contrast_high_flat.png"
+        },
+        {
+          "label": "low_harsh",
+          "description": "factor 1.15",
+          "file": "PNEUMONIA_contrast_low_harsh.png"
+        },
+        {
+          "label": "medium_harsh",
+          "description": "factor 1.4",
+          "file": "PNEUMONIA_contrast_medium_harsh.png"
+        },
+        {
+          "label": "high_harsh",
+          "description": "factor 1.7",
+          "file": "PNEUMONIA_contrast_high_harsh.png"
+        }
+      ]
+    }
+  }
+}
