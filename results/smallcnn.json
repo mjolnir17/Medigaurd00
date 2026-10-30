@@ -1,0 +1,630 @@
+{
+  "meta": {
+    "model_key": "smallcnn",
+    "display_name": "SmallCNN (trained from scratch)",
+    "dataset": "Chest X-Ray Images (Pneumonia), test split",
+    "n_images": 624,
+    "class_names": [
+      "NORMAL",
+      "PNEUMONIA"
+    ],
+    "class_counts": {
+      "NORMAL": 234,
+      "PNEUMONIA": 390
+    },
+    "seed": 1234,
+    "generated_at": "2026-10-30 10:59:47"
+  },
+  "baseline": {
+    "accuracy": 0.8157,
+    "precision": 0.78,
+    "sensitivity": 0.9821,
+    "specificity": 0.5385,
+    "f1": 0.8695,
+    "mean_confidence": 0.9504,
+    "tp": 383,
+    "tn": 126,
+    "fp": 108,
+    "fn": 7
+  },
+  "categories": {
+    "noise": {
+      "display": "Gaussian noise",
+      "conditions": [
+        {
+          "label": "low",
+          "description": "sigma 0.05",
+          "metrics": {
+            "accuracy": 0.8157,
+            "precision": 0.7835,
+            "sensitivity": 0.9744,
+            "specificity": 0.5513,
+            "f1": 0.8686,
+            "mean_confidence": 0.944,
+            "tp": 380,
+            "tn": 129,
+            "fp": 105,
+            "fn": 10
+          },
+          "delta": {
+            "accuracy": 0.0,
+            "precision": 0.0035,
+            "sensitivity": -0.0077,
+            "specificity": 0.0128,
+            "f1": -0.0009,
+            "mean_confidence": -0.0064
+          },
+          "prediction_change_rate": 0.0224,
+          "confidence_drop": 0.0064
+        },
+        {
+          "label": "medium",
+          "description": "sigma 0.1",
+          "metrics": {
+            "accuracy": 0.7821,
+            "precision": 0.7452,
+            "sensitivity": 0.9897,
+            "specificity": 0.4359,
+            "f1": 0.8502,
+            "mean_confidence": 0.9332,
+            "tp": 386,
+            "tn": 102,
+            "fp": 132,
+            "fn": 4
+          },
+          "delta": {
+            "accuracy": -0.0336,
+            "precision": -0.0348,
+            "sensitivity": 0.0076,
+            "specificity": -0.1026,
+            "f1": -0.0193,
+            "mean_confidence": -0.0172
+          },
+          "prediction_change_rate": 0.0753,
+          "confidence_drop": 0.0172
+        },
+        {
+          "label": "high",
+          "description": "sigma 0.2",
+          "metrics": {
+            "accuracy": 0.6394,
+            "precision": 0.6341,
+            "sensitivity": 1.0,
+            "specificity": 0.0385,
+            "f1": 0.7761,
+            "mean_confidence": 0.9776,
+            "tp": 390,
+            "tn": 9,
+            "fp": 225,
+            "fn": 0
+          },
+          "delta": {
+            "accuracy": -0.1763,
+            "precision": -0.1459,
+            "sensitivity": 0.0179,
+            "specificity": -0.5,
+            "f1": -0.0934,
+            "mean_confidence": 0.0272
+          },
+          "prediction_change_rate": 0.1987,
+          "confidence_drop": -0.0272
+        }
+      ],
+      "avg_accuracy": 0.7457,
+      "worst_accuracy": 0.6394,
+      "retention": 0.9142,
+      "worst_case_retention": 0.7839
+    },
+    "blur": {
+      "display": "Gaussian blur",
+      "conditions": [
+        {
+          "label": "low",
+          "description": "kernel 3, sigma 1.0",
+          "metrics": {
+            "accuracy": 0.75,
+            "precision": 0.7175,
+            "sensitivity": 0.9897,
+            "specificity": 0.3504,
+            "f1": 0.8319,
+            "mean_confidence": 0.9475,
+            "tp": 386,
+            "tn": 82,
+            "fp": 152,
+            "fn": 4
+          },
+          "delta": {
+            "accuracy": -0.0657,
+            "precision": -0.0625,
+            "sensitivity": 0.0076,
+            "specificity": -0.1881,
+            "f1": -0.0376,
+            "mean_confidence": -0.0029
+          },
+          "prediction_change_rate": 0.0817,
+          "confidence_drop": 0.0029
+        },
+        {
+          "label": "medium",
+          "description": "kernel 7, sigma 2.5",
+          "metrics": {
+            "accuracy": 0.6426,
+            "precision": 0.6362,
+            "sensitivity": 1.0,
+            "specificity": 0.047,
+            "f1": 0.7777,
+            "mean_confidence": 0.979,
+            "tp": 390,
+            "tn": 11,
+            "fp": 223,
+            "fn": 0
+          },
+          "delta": {
+            "accuracy": -0.1731,
+            "precision": -0.1438,
+            "sensitivity": 0.0179,
+            "specificity": -0.4915,
+            "f1": -0.0918,
+            "mean_confidence": 0.0286
+          },
+          "prediction_change_rate": 0.1955,
+          "confidence_drop": -0.0286
+        },
+        {
+          "label": "high",
+          "description": "kernel 15, sigma 5.0",
+          "metrics": {
+            "accuracy": 0.625,
+            "precision": 0.625,
+            "sensitivity": 1.0,
+            "specificity": 0.0,
+            "f1": 0.7692,
+            "mean_confidence": 0.998,
+            "tp": 390,
+            "tn": 0,
+            "fp": 234,
+            "fn": 0
+          },
+          "delta": {
+            "accuracy": -0.1907,
+            "precision": -0.155,
+            "sensitivity": 0.0179,
+            "specificity": -0.5385,
+            "f1": -0.1003,
+            "mean_confidence": 0.0476
+          },
+          "prediction_change_rate": 0.2131,
+          "confidence_drop": -0.0476
+        }
+      ],
+      "avg_accuracy": 0.6725,
+      "worst_accuracy": 0.625,
+      "retention": 0.8245,
+      "worst_case_retention": 0.7662
+    },
+    "brightness": {
+      "display": "Brightness",
+      "conditions": [
+        {
+          "label": "low_dark",
+          "description": "factor 0.85",
+          "metrics": {
+            "accuracy": 0.734,
+            "precision": 0.7029,
+            "sensitivity": 0.9949,
+            "specificity": 0.2991,
+            "f1": 0.8238,
+            "mean_confidence": 0.9577,
+            "tp": 388,
+            "tn": 70,
+            "fp": 164,
+            "fn": 2
+          },
+          "delta": {
+            "accuracy": -0.0817,
+            "precision": -0.0771,
+            "sensitivity": 0.0128,
+            "specificity": -0.2394,
+            "f1": -0.0457,
+            "mean_confidence": 0.0073
+          },
+          "prediction_change_rate": 0.0978,
+          "confidence_drop": -0.0073
+        },
+        {
+          "label": "medium_dark",
+          "description": "factor 0.65",
+          "metrics": {
+            "accuracy": 0.6442,
+            "precision": 0.6373,
+            "sensitivity": 1.0,
+            "specificity": 0.0513,
+            "f1": 0.7784,
+            "mean_confidence": 0.9808,
+            "tp": 390,
+            "tn": 12,
+            "fp": 222,
+            "fn": 0
+          },
+          "delta": {
+            "accuracy": -0.1715,
+            "precision": -0.1427,
+            "sensitivity": 0.0179,
+            "specificity": -0.4872,
+            "f1": -0.0911,
+            "mean_confidence": 0.0304
+          },
+          "prediction_change_rate": 0.1939,
+          "confidence_drop": -0.0304
+        },
+        {
+          "label": "high_dark",
+          "description": "factor 0.4",
+          "metrics": {
+            "accuracy": 0.625,
+            "precision": 0.625,
+            "sensitivity": 1.0,
+            "specificity": 0.0,
+            "f1": 0.7692,
+            "mean_confidence": 0.9983,
+            "tp": 390,
+            "tn": 0,
+            "fp": 234,
+            "fn": 0
+          },
+          "delta": {
+            "accuracy": -0.1907,
+            "precision": -0.155,
+            "sensitivity": 0.0179,
+            "specificity": -0.5385,
+            "f1": -0.1003,
+            "mean_confidence": 0.0479
+          },
+          "prediction_change_rate": 0.2131,
+          "confidence_drop": -0.0479
+        },
+        {
+          "label": "low_bright",
+          "description": "factor 1.15",
+          "metrics": {
+            "accuracy": 0.8365,
+            "precision": 0.809,
+            "sensitivity": 0.9667,
+            "specificity": 0.6197,
+            "f1": 0.8808,
+            "mean_confidence": 0.945,
+            "tp": 377,
+            "tn": 145,
+            "fp": 89,
+            "fn": 13
+          },
+          "delta": {
+            "accuracy": 0.0208,
+            "precision": 0.029,
+            "sensitivity": -0.0154,
+            "specificity": 0.0812,
+            "f1": 0.0113,
+            "mean_confidence": -0.0054
+          },
+          "prediction_change_rate": 0.0401,
+          "confidence_drop": 0.0054
+        },
+        {
+          "label": "medium_bright",
+          "description": "factor 1.35",
+          "metrics": {
+            "accuracy": 0.8093,
+            "precision": 0.7853,
+            "sensitivity": 0.9564,
+            "specificity": 0.5641,
+            "f1": 0.8624,
+            "mean_confidence": 0.9414,
+            "tp": 373,
+            "tn": 132,
+            "fp": 102,
+            "fn": 17
+          },
+          "delta": {
+            "accuracy": -0.0064,
+            "precision": 0.0053,
+            "sensitivity": -0.0257,
+            "specificity": 0.0256,
+            "f1": -0.0071,
+            "mean_confidence": -0.009
+          },
+          "prediction_change_rate": 0.0609,
+          "confidence_drop": 0.009
+        },
+        {
+          "label": "high_bright",
+          "description": "factor 1.6",
+          "metrics": {
+            "accuracy": 0.7628,
+            "precision": 0.7391,
+            "sensitivity": 0.959,
+            "specificity": 0.4359,
+            "f1": 0.8348,
+            "mean_confidence": 0.9373,
+            "tp": 374,
+            "tn": 102,
+            "fp": 132,
+            "fn": 16
+          },
+          "delta": {
+            "accuracy": -0.0529,
+            "precision": -0.0409,
+            "sensitivity": -0.0231,
+            "specificity": -0.1026,
+            "f1": -0.0347,
+            "mean_confidence": -0.0131
+          },
+          "prediction_change_rate": 0.0978,
+          "confidence_drop": 0.0131
+        }
+      ],
+      "avg_accuracy": 0.7353,
+      "worst_accuracy": 0.625,
+      "retention": 0.9014,
+      "worst_case_retention": 0.7662
+    },
+    "contrast": {
+      "display": "Contrast",
+      "conditions": [
+        {
+          "label": "low_flat",
+          "description": "factor 0.85",
+          "metrics": {
+            "accuracy": 0.7885,
+            "precision": 0.752,
+            "sensitivity": 0.9872,
+            "specificity": 0.4573,
+            "f1": 0.8537,
+            "mean_confidence": 0.9476,
+            "tp": 385,
+            "tn": 107,
+            "fp": 127,
+            "fn": 5
+          },
+          "delta": {
+            "accuracy": -0.0272,
+            "precision": -0.028,
+            "sensitivity": 0.0051,
+            "specificity": -0.0812,
+            "f1": -0.0158,
+            "mean_confidence": -0.0028
+          },
+          "prediction_change_rate": 0.0401,
+          "confidence_drop": 0.0028
+        },
+        {
+          "label": "medium_flat",
+          "description": "factor 0.6",
+          "metrics": {
+            "accuracy": 0.6651,
+            "precision": 0.6516,
+            "sensitivity": 0.9974,
+            "specificity": 0.1111,
+            "f1": 0.7882,
+            "mean_confidence": 0.9632,
+            "tp": 389,
+            "tn": 26,
+            "fp": 208,
+            "fn": 1
+          },
+          "delta": {
+            "accuracy": -0.1506,
+            "precision": -0.1284,
+            "sensitivity": 0.0153,
+            "specificity": -0.4274,
+            "f1": -0.0813,
+            "mean_confidence": 0.0128
+          },
+          "prediction_change_rate": 0.1731,
+          "confidence_drop": -0.0128
+        },
+        {
+          "label": "high_flat",
+          "description": "factor 0.35",
+          "metrics": {
+            "accuracy": 0.625,
+            "precision": 0.625,
+            "sensitivity": 1.0,
+            "specificity": 0.0,
+            "f1": 0.7692,
+            "mean_confidence": 0.9975,
+            "tp": 390,
+            "tn": 0,
+            "fp": 234,
+            "fn": 0
+          },
+          "delta": {
+            "accuracy": -0.1907,
+            "precision": -0.155,
+            "sensitivity": 0.0179,
+            "specificity": -0.5385,
+            "f1": -0.1003,
+            "mean_confidence": 0.0471
+          },
+          "prediction_change_rate": 0.2131,
+          "confidence_drop": -0.0471
+        },
+        {
+          "label": "low_harsh",
+          "description": "factor 1.15",
+          "metrics": {
+            "accuracy": 0.8237,
+            "precision": 0.7893,
+            "sensitivity": 0.9795,
+            "specificity": 0.5641,
+            "f1": 0.8741,
+            "mean_confidence": 0.9529,
+            "tp": 382,
+            "tn": 132,
+            "fp": 102,
+            "fn": 8
+          },
+          "delta": {
+            "accuracy": 0.008,
+            "precision": 0.0093,
+            "sensitivity": -0.0026,
+            "specificity": 0.0256,
+            "f1": 0.0046,
+            "mean_confidence": 0.0025
+          },
+          "prediction_change_rate": 0.0144,
+          "confidence_drop": -0.0025
+        },
+        {
+          "label": "medium_harsh",
+          "description": "factor 1.4",
+          "metrics": {
+            "accuracy": 0.8253,
+            "precision": 0.7983,
+            "sensitivity": 0.9641,
+            "specificity": 0.594,
+            "f1": 0.8734,
+            "mean_confidence": 0.9558,
+            "tp": 376,
+            "tn": 139,
+            "fp": 95,
+            "fn": 14
+          },
+          "delta": {
+            "accuracy": 0.0096,
+            "precision": 0.0183,
+            "sensitivity": -0.018,
+            "specificity": 0.0555,
+            "f1": 0.0039,
+            "mean_confidence": 0.0054
+          },
+          "prediction_change_rate": 0.0385,
+          "confidence_drop": -0.0054
+        },
+        {
+          "label": "high_harsh",
+          "description": "factor 1.7",
+          "metrics": {
+            "accuracy": 0.8189,
+            "precision": 0.7916,
+            "sensitivity": 0.9641,
+            "specificity": 0.5769,
+            "f1": 0.8694,
+            "mean_confidence": 0.9598,
+            "tp": 376,
+            "tn": 135,
+            "fp": 99,
+            "fn": 14
+          },
+          "delta": {
+            "accuracy": 0.0032,
+            "precision": 0.0116,
+            "sensitivity": -0.018,
+            "specificity": 0.0384,
+            "f1": -0.0001,
+            "mean_confidence": 0.0094
+          },
+          "prediction_change_rate": 0.0545,
+          "confidence_drop": -0.0094
+        }
+      ],
+      "avg_accuracy": 0.7578,
+      "worst_accuracy": 0.625,
+      "retention": 0.929,
+      "worst_case_retention": 0.7662
+    }
+  },
+  "scores": {
+    "robustness_score": 89.23,
+    "rating": "Good",
+    "worst_case_score": 77.06,
+    "worst_case_rating": "Good"
+  },
+  "risk_flags": [
+    {
+      "level": "medium",
+      "condition": "Clean images",
+      "message": "Even on clean images the model flags 46% of healthy patients as diseased (false alarms)."
+    },
+    {
+      "level": "high",
+      "condition": "Gaussian noise (high)",
+      "message": "Model collapses to predicting disease for almost every patient and can no longer identify healthy cases."
+    },
+    {
+      "level": "high",
+      "condition": "Gaussian blur (medium)",
+      "message": "Model collapses to predicting disease for almost every patient and can no longer identify healthy cases."
+    },
+    {
+      "level": "high",
+      "condition": "Gaussian blur (high)",
+      "message": "Model collapses to predicting disease for almost every patient and can no longer identify healthy cases."
+    },
+    {
+      "level": "medium",
+      "condition": "Brightness (low_dark)",
+      "message": "False alarms rise: specificity falls from 54% to 30%."
+    },
+    {
+      "level": "high",
+      "condition": "Brightness (medium_dark)",
+      "message": "Model collapses to predicting disease for almost every patient and can no longer identify healthy cases."
+    },
+    {
+      "level": "high",
+      "condition": "Brightness (high_dark)",
+      "message": "Model collapses to predicting disease for almost every patient and can no longer identify healthy cases."
+    },
+    {
+      "level": "medium",
+      "condition": "Contrast (medium_flat)",
+      "message": "False alarms rise: specificity falls from 54% to 11%."
+    },
+    {
+      "level": "high",
+      "condition": "Contrast (high_flat)",
+      "message": "Model collapses to predicting disease for almost every patient and can no longer identify healthy cases."
+    }
+  ],
+  "recommendations": [
+    {
+      "category": "Gaussian noise",
+      "priority": "medium",
+      "actions": [
+        "Add denoising (e.g. median or non-local means filtering) before inference",
+        "Retrain with Gaussian-noise augmentation"
+      ]
+    },
+    {
+      "category": "Gaussian blur",
+      "priority": "high",
+      "actions": [
+        "Add a sharpness check that rejects or flags blurry scans",
+        "Retrain with blur augmentation"
+      ]
+    },
+    {
+      "category": "Brightness",
+      "priority": "medium",
+      "actions": [
+        "Normalize exposure before inference (e.g. histogram equalization)",
+        "Retrain with brightness augmentation, especially darker images"
+      ]
+    },
+    {
+      "category": "Contrast",
+      "priority": "medium",
+      "actions": [
+        "Apply contrast enhancement (e.g. CLAHE) before inference",
+        "Retrain with contrast augmentation, especially low-contrast images"
+      ]
+    },
+    {
+      "category": "Input quality control",
+      "priority": "high",
+      "actions": [
+        "Add an image-quality gate that rejects very dark, flat or blurry scans instead of letting the model guess"
+      ]
+    }
+  ]
+}
