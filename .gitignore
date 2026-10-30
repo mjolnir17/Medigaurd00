@@ -1,4 +1,4 @@
-﻿__pycache__/
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
@@ -12,6 +12,7 @@ kaggle.json
 *.env
 .kaggle/
 
-data/
+/data/
 
 *.pt
+/storage/
