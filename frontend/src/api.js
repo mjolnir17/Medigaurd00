@@ -8,3 +8,4 @@ const get = (path) =>
 
 export const fetchModels = () => get("/models");
 export const fetchResults = (key) => get(`/results/${key}`);
+export const fetchCompare = () => get("/compare");

@@ -1,0 +1,12 @@
+.views { display: flex; gap: 16px; }
+.flags { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.flags li { display: flex; gap: 14px; align-items: flex-start; padding: 12px 14px; border-radius: 14px; box-shadow: var(--inset); }
+.flags .muted { margin: 2px 0 0; }
+.recs { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.rec { border-radius: 16px; box-shadow: var(--inset); padding: 14px 16px; }
+.rec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.rec ul { margin: 0; padding-left: 18px; font-size: 0.9rem; color: var(--muted); }
+.insight { padding: 14px 18px; border-radius: 14px; box-shadow: var(--inset); }
+.compare th.model { color: var(--text); font-size: 0.85rem; }
+.compare .group td { font-family: var(--serif); font-weight: 600; padding-top: 22px; border-top: 0; }
+.compare td.best { font-weight: 600; color: var(--accent); }
