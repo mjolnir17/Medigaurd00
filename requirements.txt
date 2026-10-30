@@ -36,3 +36,5 @@ scikit-learn
 matplotlib
 kagglefastapi
 uvicorn
+python-multipart
+httpx
